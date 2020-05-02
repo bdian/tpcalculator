@@ -1,0 +1,82 @@
+body{
+    background-color: #F6F8FF;
+}
+
+
+.CalcContainer{
+  margin: 0 auto;
+  max-width: 120rem;
+  display: flex;
+  padding-top: 10rem;
+}
+
+.About {
+  flex:50%;
+  padding-left: 2.5%;
+}
+
+.Result {
+  font-size: 4em;
+}
+
+.Prefix {
+    color: red;
+    margin-right: 1.5em;
+}
+
+.NoSheets {
+    color: green;
+}
+
+.CalcFieldsContainer {
+  flex: 50%;
+  padding-right: 2.5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.Advanced {
+  color: #555;
+  width: 100%;
+  margin-top: 5em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.CalcField {
+  list-style-type: none;
+  margin: 1em 0em;
+  font-size: 2em;
+  transition: all 150ms linear 0s;
+}
+.CalcField label {
+    color: #555;
+    margin-right: 1.5rem;
+    text-decoration: none;
+}
+
+.CalcField input {
+    width: 4em;
+    float: right;   
+    border: none;
+    border-bottom: 1px solid #666;  
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+.CalcField :hover {
+    color: red;
+}
+
+.CalcField :focus {
+      color: red;
+}
+
+.label {
+  font-size: 30px;
+  max-width: 20rem;
+  display: flex;
+  margin: auto;
+  padding: 1em;
+}
