@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   handleNoSheetsPerRollChange(event) {
-    this.setState({noSheetsPerRfoll: event.target.value});
+    this.setState({noSheetsPerRoll: event.target.value});
     this.runCalculation();
   }
 
