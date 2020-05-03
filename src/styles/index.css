@@ -8,6 +8,7 @@ body{
   max-width: 120rem;
   display: flex;
   padding-top: 10rem;
+  padding-left: 20px;
 }
 
 .About {
@@ -32,6 +33,7 @@ body{
 
 .CalcFieldsContainer {
   flex: 50%;
+  min-width: 220px;
   padding-right: 2.5%;
   justify-content: center;
   align-items: center;
@@ -78,11 +80,13 @@ body{
   }
   
 .CalcField :hover {
-    color: red;
+    color: black;
+    border-bottom: 2px solid black;  
 }
 
 .CalcField :focus {
-      color: red;
+      color: black;
+      border-bottom: 2px solid #666;  
 }
 
 .label {
