@@ -15,7 +15,10 @@ const Image = styled.img`
   display: block;
   margin: auto;
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
-  transform: translate(-50%, -50%) }
+  transform: translate(-50%) }
+  width: 40%;
+  max-width: 400px;
+  height: auto;
 `;
