@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   handleNoSheetsPerRollChange(event) {
-    this.setState({noSheetsPerRoll: event.target.value});
+    this.setState({noSheetsPerRfoll: event.target.value});
     this.runCalculation();
   }
 
@@ -90,7 +90,7 @@ class App extends Component {
           </div>
           <div class="About">
             <div class="Result">
-              <div class="Prefix">Number of days until you wipe your last:</div><div class="NoSheets">{this.state.calcResult}</div>
+              <div class="Prefix">Number of days until you wipe your last</div><div class="NoSheets">{this.state.calcResult}</div>
             </div>
           </div>
         </div>

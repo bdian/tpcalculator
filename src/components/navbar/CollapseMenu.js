@@ -16,10 +16,9 @@ const CollapseMenu = (props) => {
       }}
       >
         <NavLinks>
-          <li><a href="/" onClick={props.handleNavbar}>link n1</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n2</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n3</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n4</a></li>
+          <li><a href="/" onClick={props.handleNavbar}>Calculator</a></li>
+          <li><a href="https://dev.azure.com/paulbag/tp-calc/_dashboards/dashboard/fd6e25b2-8f27-49be-8155-68d6e15c371c" onClick={props.handleNavbar}>Stats</a></li>
+          <li><a href="/" onClick={props.handleNavbar}>About</a></li>
         </NavLinks>
       </CollapseWrapper>
     );

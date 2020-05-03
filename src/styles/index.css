@@ -16,16 +16,18 @@ body{
 }
 
 .Result {
-  font-size: 4em;
+  font-size: 3em;
 }
 
 .Prefix {
     color: red;
-    margin-right: 1.5em;
+    margin-top: 10px;
 }
 
 .NoSheets {
     color: green;
+    font-size: 7em;
+    text-align: center;
 }
 
 .CalcFieldsContainer {
@@ -48,7 +50,12 @@ body{
   margin: 1em 0em;
   font-size: 2em;
   transition: all 150ms linear 0s;
+
+  @media (max-width: 768px) {
+    font-size: 1em;
+  }
 }
+
 .CalcField label {
     color: #555;
     margin-right: 1.5rem;
@@ -63,6 +70,11 @@ body{
     text-decoration: none;
     cursor: pointer;
     background-color: transparent;
+    font-size: 20px;
+    
+    @media (max-width: 768px) {
+      width: 2em;
+    }
   }
   
 .CalcField :hover {

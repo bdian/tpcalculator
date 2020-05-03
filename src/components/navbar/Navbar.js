@@ -37,9 +37,10 @@ const Navbar = (props) => {
       <NavBar style={barAnimation}>
         <FlexContainer>
           <Brand />
+          <Title>TP Calculator</Title>
           <NavLinks style={linkAnimation}>
             <a href='/'>Calculator</a>
-            <a href='/'>Stats</a>
+            <a href='https://dev.azure.com/paulbag/tp-calc/_dashboards/dashboard/fd6e25b2-8f27-49be-8155-68d6e15c371c'>Stats</a>
             <a href='/'>About</a>
           </NavLinks>
           <BurgerWrapper>
@@ -82,6 +83,17 @@ const FlexContainer = styled.div`
   justify-content: space-between;
   height: 5rem;
 `;
+
+const Title = styled.div`
+  margin: auto 0;
+  color: #fdcb6e;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #fdcb6e;
+  font-size: 20px;
+  }
+  `;
 
 const NavLinks = styled(animated.ul)`
   justify-self: end;
