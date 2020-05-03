@@ -85,15 +85,13 @@ const FlexContainer = styled.div`
 `;
 
 const Title = styled.div`
-  margin: auto 0;
+  margin: auto;
   color: #fdcb6e;
   text-transform: uppercase;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid #fdcb6e;
   font-size: 20px;
-  }
-  `;
+`;
 
 const NavLinks = styled(animated.ul)`
   justify-self: end;
