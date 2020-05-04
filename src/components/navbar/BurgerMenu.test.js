@@ -1,18 +1,11 @@
 import React from 'react';
-import App from './App';
+import BurgerMenu from './BurgerMenu';
 import renderer from 'react-test-renderer';
 
-
-test('App snapshot', () => {
+test('Burger Menu snapshot', () => {
   const component = renderer.create(
-    <App />,
+    <BurgerMenu />,
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
-});
-
-
-test('noRollsInHouse field inputs', () => {
-  expect(true).toEqual(true);
-
 });

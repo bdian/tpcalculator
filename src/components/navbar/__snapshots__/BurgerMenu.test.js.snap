@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Burger Menu snapshot 1`] = `
+<div
+  className="sc-AxjAm kqgJvM"
+>
+  <div
+    className=""
+  >
+    <span>
+       
+    </span>
+    <span>
+       
+    </span>
+    <span>
+       
+    </span>
+  </div>
+</div>
+`;

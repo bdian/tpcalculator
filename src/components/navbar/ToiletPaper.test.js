@@ -1,18 +1,12 @@
 import React from 'react';
-import App from './App';
+import ToiletPaper from './ToiletPaper';
 import renderer from 'react-test-renderer';
 
-
-test('App snapshot', () => {
+test('Toilet Paper snapshot', () => {
+  Date.now = jest.fn(() => 1482363367071);
   const component = renderer.create(
-    <App />,
+    <ToiletPaper />,
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
-});
-
-
-test('noRollsInHouse field inputs', () => {
-  expect(true).toEqual(true);
-
 });

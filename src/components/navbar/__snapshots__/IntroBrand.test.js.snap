@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Intro Brand snapshot 1`] = `
+<img
+  alt="TP-Calculator Logo"
+  className="sc-AxjAm JKNjv"
+  src="../../assets/logo.png"
+/>
+`;

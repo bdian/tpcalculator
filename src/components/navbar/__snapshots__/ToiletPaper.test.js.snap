@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toilet Paper snapshot 1`] = `
+<div
+  className="sc-AxjAm fcsFOA"
+  style={
+    Object {
+      "transform": AnimatedInterpolation {
+        "attach": [Function],
+        "calc": [Function],
+        "children": Array [],
+        "detach": [Function],
+        "payload": Array [
+          AnimatedValue {
+            "animatedStyles": Set {},
+            "children": Array [],
+            "done": false,
+            "lastPosition": 0,
+            "lastTime": undefined,
+            "lastVelocity": undefined,
+            "payload": undefined,
+            "setValue": [Function],
+            "startPosition": 0,
+            "startTime": 1482363367071,
+            "value": 0,
+          },
+        ],
+      },
+    }
+  }
+/>
+`;

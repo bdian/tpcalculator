@@ -1,18 +1,11 @@
 import React from 'react';
-import App from './App';
+import IntroBrand from './IntroBrand';
 import renderer from 'react-test-renderer';
 
-
-test('App snapshot', () => {
+test('Intro Brand snapshot', () => {
   const component = renderer.create(
-    <App />,
+    <IntroBrand />,
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
-});
-
-
-test('noRollsInHouse field inputs', () => {
-  expect(true).toEqual(true);
-
 });

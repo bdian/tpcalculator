@@ -1,18 +1,11 @@
 import React from 'react';
-import App from './App';
+import Brand from './Brand';
 import renderer from 'react-test-renderer';
 
-
-test('App snapshot', () => {
+test('Brand snapshot', () => {
   const component = renderer.create(
-    <App />,
+    <Brand />,
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
-});
-
-
-test('noRollsInHouse field inputs', () => {
-  expect(true).toEqual(true);
-
 });

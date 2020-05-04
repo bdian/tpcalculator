@@ -1,18 +1,11 @@
 import React from 'react';
-import App from './App';
+import Navbar from './Navbar';
 import renderer from 'react-test-renderer';
 
-
-test('App snapshot', () => {
+test('Navbar snapshot', () => {
   const component = renderer.create(
-    <App />,
+    <Navbar />,
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
-});
-
-
-test('noRollsInHouse field inputs', () => {
-  expect(true).toEqual(true);
-
 });

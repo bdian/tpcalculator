@@ -1,18 +1,11 @@
 import React from 'react';
-import App from './App';
+import CollapseMenu from './CollapseMenu';
 import renderer from 'react-test-renderer';
 
-
-test('App snapshot', () => {
+test('Collapse Menu snapshot', () => {
   const component = renderer.create(
-    <App />,
+    <CollapseMenu />,
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
-});
-
-
-test('noRollsInHouse field inputs', () => {
-  expect(true).toEqual(true);
-
 });
