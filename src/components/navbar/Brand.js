@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import logo from "../../assets/logo-min.png";
 
 const Brand = () => {
   return (
-    <Image src="../../assets/logo-min.png" alt="TP-Calculator Logo" />
+    <Image src={logo} alt="TP-Calculator Logo" />
   );
 };
 

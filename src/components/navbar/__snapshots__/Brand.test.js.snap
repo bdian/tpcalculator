@@ -4,6 +4,10 @@ exports[`Brand snapshot 1`] = `
 <img
   alt="TP-Calculator Logo"
   className="sc-AxjAm kzuEgZ"
-  src="../../assets/logo-min.png"
+  src={
+    Object {
+      "process": [Function],
+    }
+  }
 />
 `;

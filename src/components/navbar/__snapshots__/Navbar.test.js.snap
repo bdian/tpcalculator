@@ -16,7 +16,11 @@ Array [
       <img
         alt="TP-Calculator Logo"
         className="sc-AxjAm kzuEgZ"
-        src="../../assets/logo-min.png"
+        src={
+          Object {
+            "process": [Function],
+          }
+        }
       />
       <div
         className="sc-Axmtr ficJIm"
@@ -83,7 +87,11 @@ Array [
     <img
       alt="TP-Calculator Logo"
       className="sc-AxirZ hOCoVY"
-      src="../../assets/logo.png"
+      src={
+        Object {
+          "process": [Function],
+        }
+      }
     />
   </nav>,
 ]
