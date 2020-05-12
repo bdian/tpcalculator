@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import Navbar from "./components/navbar/Navbar";
+import Calculator from "./components/calculator/Calculator";
+import axios from 'axios'
 //import Calculator from "./components/Calculator";
 
 import GlobalStyle from './styles/Global';
+
 
 class App extends Component {
   state = {
@@ -15,41 +18,84 @@ class App extends Component {
     noWipesPerTrip: 3,
     noPeopleInHousehold: 3
   }
-
+  
   handleNavbar = () => {
     this.setState({ navbarOpen: !this.state.navbarOpen });
   }
 
-  handleNoRollsInHouseChange(event) {
-    this.setState({noRollsInHouse: event.target.value});
+  handleNoRollsInHouseChange = (event) => {
+    this.setState({ noRollsInHouse: event.target.value });
     this.runCalculation();
   }
 
-  handleNoWipeableVisitsChange(event) {
-    this.setState({noWipeableVisits: event.target.value});
+  handleNoWipeableVisitsChange = (event) => {
+    this.setState({ noWipeableVisits: event.target.value });
     this.runCalculation();
   }
 
   handleNoSheetsPerWipeChange(event) {
-    this.setState({noSheetsPerWipe: event.target.value});
+    this.setState({ noSheetsPerWipe: event.target.value });
     this.runCalculation();
   }
 
   handleNoWipesPerTripChange(event) {
-    this.setState({noWipesPerTrip: event.target.value});
+    this.setState({ noWipesPerTrip: event.target.value });
     this.runCalculation();
   }
 
   handleNoSheetsPerRollChange(event) {
-    this.setState({noSheetsPerRoll: event.target.value});
+    this.setState({ noSheetsPerRoll: event.target.value });
     this.runCalculation();
   }
 
   handleNoPeopleInHouseholdChange(event) {
-    this.setState({noPeopleInHousehold: event.target.value});
+    this.setState({ noPeopleInHousehold: event.target.value });
     this.runCalculation();
   }
 
+  runCalculation = () => {
+    const axiosconfig = {
+      method: 'get',
+      url: 'https://tp-calc-fa.azurewebsites.net/api/CountdownToExstinktion',
+      params: {
+        rollsInHouse: this.state.noRollsInHouse.toString(),
+        wipeableVisits: this.state.noWipeableVisits.toString(),
+        sheetsPerWipe: this.state.noSheetsPerWipe.toString(),
+        wipesPerTrip: this.state.noWipesPerTrip.toString(),
+        sheetsPerRoll: this.state.noSheetsPerRoll.toString(),
+        peopleInHousehold: this.state.noPeopleInHousehold.toString(),
+      },
+      headers: {
+        'x-functions-key': 'CB5i/ZkjhzCbc5Lx84015L2KUsRzJJdBwqJo43J8AdDyZ9r2MGYQQg=='
+      }
+    }
+
+    axios(axiosconfig)
+      .then(function (response) {
+        this.setState({ calcResult: response.data });
+      })
+      .catch(function (error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request);
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.log('Error', error.message);
+        }
+        console.log(error.config);
+        alert(error.message);
+      })
+  }
+
+  /*
   runCalculation = () => {
     var res = -1;
     var rollsInHouse = this.state.noRollsInHouse;
@@ -59,14 +105,15 @@ class App extends Component {
     var sheetsPerRoll = this.state.noSheetsPerRoll;
     var peopleInHousehold = this.state.noPeopleInHousehold;
 
-    var availableWipeage =  sheetsPerRoll * rollsInHouse
-    var usage = sheetsPerWipe * wipesPerTrip * wipeableVisits * peopleInHousehold 
+    var availableWipeage = sheetsPerRoll * rollsInHouse
+    var usage = sheetsPerWipe * wipesPerTrip * wipeableVisits * peopleInHousehold
 
     res = Math.round(availableWipeage / usage)
 
-    this.setState({calcResult: res});
+    this.setState({ calcResult: res });
 
   }
+*/
 
   render() {
 
@@ -77,23 +124,7 @@ class App extends Component {
           handleNavbar={this.handleNavbar}
         />
         <GlobalStyle />
-
-        <div class="CalcContainer">
-          <div class="CalcFieldsContainer">
-            <div class="CalcField"><label>Number of rolls in your house</label><input type="number" min="0" value={this.state.noRollsInHouse} onChange={this.handleNoRollsInHouseChange.bind(this)}></input></div>
-            <div class="CalcField"><label>Number of wipeable toilet visits per day</label><input type="number" min="1" value={this.state.noWipeableVisits} onChange={this.handleNoWipeableVisitsChange.bind(this)}></input></div>
-            <div class="Advanced">Advanced Settings</div>
-            <div class="CalcField"><label>Number of wipes per trip</label><input type="number" min="1" value={this.state.noWipesPerTrip} onChange={this.handleNoWipesPerTripChange.bind(this)}></input></div>
-            <div class="CalcField"><label>Number of sheets per wipe</label><input type="number" min="1" value={this.state.noSheetsPerWipe} onChange={this.handleNoSheetsPerWipeChange.bind(this)}></input></div>
-            <div class="CalcField"><label>Number of sheets on a roll</label><input type="number" min="1" value={this.state.noSheetsPerRoll} onChange={this.handleNoSheetsPerRollChange.bind(this)}></input></div>
-            <div class="CalcField"><label>Number of people in household</label><input type="number" min="1" value={this.state.noPeopleInHousehold} onChange={this.handleNoPeopleInHouseholdChange.bind(this)}></input></div>
-          </div>
-          <div class="About">
-            <div class="Result">
-              <div class="Prefix">Number of days until you wipe your last</div><div class="NoSheets">{this.state.calcResult}</div>
-            </div>
-          </div>
-        </div>
+        <Calculator />
       </>
     )
   }
