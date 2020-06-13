@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="6" failures="0" time="8.579">
+  <testsuite name="src\components\navbar\BurgerMenu.test.js" errors="0" failures="0" skipped="0" timestamp="2020-06-13T12:45:26" time="4.62" tests="1">
+    <testcase classname=" Burger Menu snapshot" name=" Burger Menu snapshot" time="0.055">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\components\navbar\ToiletPaper.test.js" errors="0" failures="0" skipped="0" timestamp="2020-06-13T12:45:26" time="4.656" tests="1">
+    <testcase classname=" Toilet Paper snapshot" name=" Toilet Paper snapshot" time="0.069">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\components\navbar\CollapseMenu.test.js" errors="0" failures="0" skipped="0" timestamp="2020-06-13T12:45:26" time="4.757" tests="1">
+    <testcase classname=" Collapse Menu snapshot" name=" Collapse Menu snapshot" time="0.049">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\components\navbar\IntroBrand.test.js" errors="0" failures="0" skipped="0" timestamp="2020-06-13T12:45:31" time="0.603" tests="1">
+    <testcase classname=" Intro Brand snapshot" name=" Intro Brand snapshot" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\components\navbar\Navbar.test.js" errors="0" failures="0" skipped="0" timestamp="2020-06-13T12:45:31" time="0.783" tests="1">
+    <testcase classname=" Navbar snapshot" name=" Navbar snapshot" time="0.091">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\components\navbar\Brand.test.js" errors="0" failures="0" skipped="0" timestamp="2020-06-13T12:45:31" time="0.649" tests="1">
+    <testcase classname=" Brand snapshot" name=" Brand snapshot" time="0.023">
+    </testcase>
+  </testsuite>
+</testsuites>
