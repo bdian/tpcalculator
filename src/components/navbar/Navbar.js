@@ -41,7 +41,7 @@ const Navbar = (props) => {
           <NavLinks style={linkAnimation}>
             <a href='/'>Calculator</a>
             <a href='https://dev.azure.com/paulbag/tp-calc/_dashboards/dashboard/fd6e25b2-8f27-49be-8155-68d6e15c371c'>Stats</a>
-            <a href='/'>About</a>
+            <a href='https://dev.azure.com/paulbag/tp-calc'>About</a>
           </NavLinks>
           <BurgerWrapper>
             <BurgerMenu
