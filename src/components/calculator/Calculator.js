@@ -17,7 +17,7 @@ class Calculator extends React.Component {
     };
   }
 
-  handleInputChange = async (event) => {
+  handleInputChange = (event) => {
     switch (event.target.name) {
       case "noRollsInHouse":
         this.setState({ noRollsInHouse: event.target.value });
@@ -38,8 +38,11 @@ class Calculator extends React.Component {
         this.setState({ noPeopleInHousehold: event.target.value });
         break;
     }
+ }
 
-    const axiosconfig = {
+
+  getCalculation = async () => {
+     const axiosconfig = {
       method: 'get',
       url: 'https://tp-calc-fa.azurewebsites.net/api/CountdownToExstinktion',
       params: {
@@ -54,9 +57,7 @@ class Calculator extends React.Component {
         'x-functions-key': 'CB5i/ZkjhzCbc5Lx84015L2KUsRzJJdBwqJo43J8AdDyZ9r2MGYQQg=='
       }
     }
-
-    var calcRes;
-    
+    var calcRes = -1;   
     await axios(axiosconfig)
       .then(function (response) {
           calcRes = response.data;
@@ -80,10 +81,10 @@ class Calculator extends React.Component {
         console.log(error.config);
         return alert(error.message);
       })
-      this.setState({ calcResult: calcRes });
+      return calcRes;
   }
 
-  /*
+  
   runCalculation = () => {
     var res = -1;
     var rollsInHouse = this.state.noRollsInHouse;
@@ -98,10 +99,10 @@ class Calculator extends React.Component {
 
     res = Math.round(availableWipeage / usage)
 
-    this.setState({ calcResult: res });
+    return res;
 
   }
-*/
+
 
   render() {
 
@@ -119,7 +120,7 @@ class Calculator extends React.Component {
           </div>
           <div class="About">
             <div class="Result">
-              <div class="Prefix">Number of days until you wipe your last</div><div class="NoSheets">{this.state.calcResult}</div>
+              <div class="Prefix">Number of days until you wipe your last</div><div class="NoSheets">{this.runCalculation()}</div>
             </div>
           </div>
         </div>
